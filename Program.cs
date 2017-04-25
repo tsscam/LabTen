@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+9
 namespace Lab10
 {
     class Program
@@ -14,7 +14,7 @@ namespace Lab10
 
             Console.Title = "Movie / Category Inventory";
             Console.WriteLine("Search for MOVIE");
-
+            //Arrray List of Movies, Categories
             MovieCls[] ListOfMovies = new MovieCls[10];
 
             ListOfMovies[0] = new MovieCls("Jurassic Park", "Action");
@@ -34,13 +34,13 @@ namespace Lab10
                 Console.WriteLine("~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ");
                 Console.WriteLine("");
                 
-
+                //directions for user
                 Console.WriteLine("Please enter any of these movie category: ");
                 
                 Console.WriteLine("Family, Horror, Commedy or Action: ");
                 Console.WriteLine("==================================");
 
-
+                //action taken to pull validation from input...//
                 string CategoryInput = ValidationCls.GetValidInput();
                 Console.WriteLine();
                 foreach (MovieCls temp in ListOfMovies)

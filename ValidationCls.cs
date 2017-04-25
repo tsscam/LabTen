@@ -10,12 +10,7 @@ namespace Lab10
     { 
         public static string GetValidInput()
         { 
-    //static = one copy per Class
-    //static is ONE CUP...Funtionality not storing things
-    //instance = one copy per Object
-    //
-    
-        while (true)
+          while (true)
             {
                 string input = Console.ReadLine().ToLower();
                 if (input == "Family")
@@ -30,54 +25,15 @@ namespace Lab10
     }
  
 
-public static int GetValidInteger()
-{
-    int input;
-    while (!int.TryParse(Console.ReadLine(), out input))
-    {
-        Console.WriteLine("Please enter a valid input.");
-    }
-    return input;
-}
-//Validates that integer is within a given range
-public static int GetNumberInRange(int min, int max)
-{
-    int input = GetValidInteger();
-    while (input < min || input > max)
-    {
-        Console.WriteLine("Please enter an integer between {0} and {1}.", min, max);
-        input = GetValidInteger();
-    }
-    return input;
-}
-public static double GetValidDouble()
-{
-    double input;
-    while (!double.TryParse(Console.ReadLine(), out input))
-    {
-        Console.WriteLine("Please enter a valid double input.");
-    }
-    return input;
-}
-//Validates that integer is within a given range
-public static double GetInRangeDouble(double min, double max)
-{
-    double input = GetValidDouble();
-    while (input < min || input > max)
-    {
-        Console.WriteLine("Please enter a double between {0} and {1}.", min, max);
-        input = GetValidDouble();
-    }
-    return input;
-}
+
         public static bool GetContinue()
         {
             //Continue Loop
             string Continue;
             while (true)
             {
-            
-                Console.WriteLine("Would You Like to Continue?  (y/n)");
+                Console.WriteLine("");
+                Console.WriteLine("Do You Want to Search for Another Movie?  (y/n)");
                 Continue = Console.ReadLine().ToUpper();
                 Console.WriteLine("");
                 if (Continue == "Y")
@@ -93,5 +49,23 @@ public static double GetInRangeDouble(double min, double max)
         }
     }
     }
+class Validation
+{
 
+    // Method to Get Valid String
+    public static string GetValidInput()
+    {
+        string Input = Console.ReadLine().ToUpper();
+
+        // Validate Input
+        while ((string.IsNullOrEmpty(Input)) || (string.IsNullOrWhiteSpace(Input) || (Input.Length == 0)))
+        {
+       
+            Console.Write("You Enter Action, Comedy, Family or Horror here  --->:   ");
+            Input = Console.ReadLine().ToUpper(); ;
+
+        }
+        return Input;
+    }
+}
 

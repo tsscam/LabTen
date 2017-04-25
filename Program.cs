@@ -13,6 +13,7 @@ namespace Lab10
             bool run = true;
 
             Console.Title = "Movie / Category Inventory";
+            Console.WriteLine("Search for MOVIE");
 
             MovieCls[] ListOfMovies = new MovieCls[10];
 
@@ -29,19 +30,25 @@ namespace Lab10
 
             do
             {
-                Console.WriteLine("Select a category: ");
+                
+                Console.WriteLine("~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ");
+                Console.WriteLine("");
+                
 
-                //for (int i = 0; i < ListOfMovies.Length; i++)
+                Console.WriteLine("Please enter any of these movie category: ");
+                
+                Console.WriteLine("Family, Horror, Commedy or Action: ");
+                Console.WriteLine("==================================");
+                              
 
-                Console.WriteLine("Please enter a movie category: ");
                 string CategoryInput = Console.ReadLine();
-
+                Console.WriteLine("");
                 foreach (MovieCls temp in ListOfMovies)
                 {
                     if (CategoryInput.ToLower() == temp.Category.ToLower())
                     {
                         // will MATCH the MOVIE TO CATEGORY 
-                        Console.WriteLine(temp.Movie1);
+                        Console.WriteLine("These Movies are Available: --->\t" + temp.Movie1);
                     }
                 }
                 run = ValidationCls.GetContinue();

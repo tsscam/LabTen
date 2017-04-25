@@ -39,13 +39,13 @@ namespace Lab10
                 
                 Console.WriteLine("Family, Horror, Commedy or Action: ");
                 Console.WriteLine("==================================");
-                              
 
-                string CategoryInput = Console.ReadLine();
-                Console.WriteLine("");
+
+                string CategoryInput = ValidationCls.GetValidInput();
+                Console.WriteLine();
                 foreach (MovieCls temp in ListOfMovies)
                 {
-                    if (CategoryInput.ToLower() == temp.Category.ToLower())
+                    if (CategoryInput == temp.Category.ToLower())
                     {
                         // will MATCH the MOVIE TO CATEGORY 
                         Console.WriteLine("These Movies are Available: --->\t" + temp.Movie1);

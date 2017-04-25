@@ -13,14 +13,16 @@ namespace Lab10
           while (true)
             {
                 string input = Console.ReadLine().ToLower();
-                if (input == "Family")
+                if (input == "family")
                     return input;
-                else if (input == "Commedy")
+                else if (input == "commedy")
                     return input;
-                else if (input == "Horror")
+                else if (input == "horror")
                     return input;
-                else if (input == "Action")
+                else if (input == "action")
                     return input;
+                else
+                    Console.WriteLine("Invalid input. Type: Family, Commedy, Horror or Action: ");
             }
     }
  

@@ -10,11 +10,13 @@ namespace Lab10
     {
         static void Main(string[] args)
         {
+            bool run = true;
+
             Console.Title = "Movie / Category Inventory";
 
             MovieCls[] ListOfMovies = new MovieCls[10];
 
-            ListOfMovies[0] = new MovieCls("Jurassic Park" , "Action");
+            ListOfMovies[0] = new MovieCls("Jurassic Park", "Action");
             ListOfMovies[1] = new MovieCls("Home Alone", "Family");
             ListOfMovies[2] = new MovieCls("Independence Day", "Action");
             ListOfMovies[3] = new MovieCls("SAW", "Horror");
@@ -25,12 +27,12 @@ namespace Lab10
             ListOfMovies[8] = new MovieCls("BFG", "Family");
             ListOfMovies[9] = new MovieCls("Superman", "Family");
 
-            Console.WriteLine("Select a category: ");
-
-
-            for (int i = 0; i < ListOfMovies.Length; i++)
+            do
             {
-                //ListOfMovies[i] = new MovieCls();
+                Console.WriteLine("Select a category: ");
+
+                //for (int i = 0; i < ListOfMovies.Length; i++)
+
                 Console.WriteLine("Please enter a movie category: ");
                 string CategoryInput = Console.ReadLine();
 
@@ -42,11 +44,28 @@ namespace Lab10
                         Console.WriteLine(temp.Movie1);
                     }
                 }
-            }
+                run = ValidationCls.GetContinue();
 
+            } while (run == true);
         }
-
     }
 }
+      
+              
 
+      
   
+                    
+
+                    
+           
+              
+        
+
+                        
+            
+            
+    
+
+
+ 
